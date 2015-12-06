@@ -1,0 +1,15 @@
+<h1>Welcome to Super Rentals</h1>
+
+We hope you find exactly what you're looking for in a place to stay.
+
+{{#each model as |rental|}}
+	<h2>{{rental.title}}</h2>
+	<p>Owner: {{rental.owner}}</p>
+    <p>Type: {{rental.type}}</p>
+    <p>Location: {{rental.city}}</p>
+    <p>Number of bedrooms: {{rental.bedrooms}}</p>
+    <img src="{{rental.image}}" width='150px' height='150px' />
+{{/each}}
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Contact us{{/link-to}}
